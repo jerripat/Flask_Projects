@@ -1,4 +1,7 @@
-<!DOCTYPE html>
+{% extends 'base.html' %}
+{% block content %}
+
+
 
 <html>
     <head>
@@ -12,17 +15,20 @@
         <center>
         <h1>This is my resume site</h1>
 
-        <div class="container">
-            <p>This is a paragrah, hello {{ name }}
-
-                
+            <p>This is a paragrah,  {{ f_name }}</p>
+            <br>
+                <ol>
+                    {% for topping in favPizza %}
+                        <li> {{ topping }}</li>
+                    {% endfor %}
+                </ol>
                 <!--{% if f_name == "Jerri Pa" %}
                 {{ f_name }}!!
                 {% else %}
                 There !!
                 {% endif %}-->
-            </p>
-        </div>
-    </center>
+        </center>
     </body>
+
 </html>
+{% endblock %}

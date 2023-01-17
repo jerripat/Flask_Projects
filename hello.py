@@ -10,3 +10,7 @@ def index():
     fav_pizza= ['peperoni', 'cheese', 'mushrooms', 'chilie']
     return render_template('index.html',
             f_name=fName, favPizza=fav_pizza)
+
+@app.route("/about")
+def about():
+    return render_template('about.html')
